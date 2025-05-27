@@ -46,6 +46,9 @@ jobs:
           push: true
           tags: ${{ env.FULL_IMAGE_NAME }}-base
 
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
+
       - name: Setup sqlc
         uses: ./.github/actions/setup-sqlc
 
