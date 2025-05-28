@@ -596,3 +596,13 @@ func (c *Client) WorkspaceAgentLogsAfter(ctx context.Context, agentID uuid.UUID,
 	d := wsjson.NewDecoder[[]WorkspaceAgentLog](conn, websocket.MessageText, c.logger)
 	return d.Chan(), d, nil
 }
+
+// ExecuteCommandRequest represents a request to execute a command on a workspace agent.
+type ExecuteCommandRequest struct {
+	Command string `json:"command"`
+}
+
+// ExecuteCommandResponse represents the response from executing a command on a workspace agent.
+type ExecuteCommandResponse struct {
+	Output string `json:"output"`
+}

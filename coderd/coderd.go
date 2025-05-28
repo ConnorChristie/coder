@@ -1328,6 +1328,7 @@ func New(options *Options) *API {
 				r.Get("/containers", api.workspaceAgentListContainers)
 				r.Post("/containers/devcontainers/container/{container}/recreate", api.workspaceAgentRecreateDevcontainer)
 				r.Get("/coordinate", api.workspaceAgentClientCoordinate)
+				r.Post("/execute", api.workspaceAgentExecute)
 
 				// PTY is part of workspaceAppServer.
 			})
