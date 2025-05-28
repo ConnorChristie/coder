@@ -61,7 +61,7 @@ jobs:
           go mod download
           make gen/mark-fresh
           export DOCKER_IMAGE_NO_PREREQUISITES=true
-          export CODER_IMAGE_BUILD_BASE_TAG="${{ env.FULL_IMAGE_NAME }}-base"
+          export CODER_BASE_IMAGE_TAG="${{ env.FULL_IMAGE_NAME }}-base"
           make -j build/coder_linux_amd64
           ./scripts/build_docker.sh \
             --arch amd64 \
