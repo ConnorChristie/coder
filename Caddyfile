@@ -1,4 +1,0 @@
-
-cb31e3e0e9.cloud.coffeeboy.cafe:443 {
-    reverse_proxy :8000
-}
